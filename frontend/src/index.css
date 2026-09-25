@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F5F3ED;
+    color: #111111;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Background Retro Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
+}
+
+/* Retro Dots Pattern */
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-halftone {
+  background-image: radial-gradient(#111111 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  opacity: 0.08;
+}
+
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(17, 17, 17, 0.05),
+    rgba(17, 17, 17, 0.05) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Text Outline Effect */
+.text-outline-black {
+  -webkit-text-stroke: 1.5px rgba(17, 17, 17, 0.15);
+  color: transparent;
+}
+
+.text-outline-heavy {
+  -webkit-text-stroke: 2px rgba(17, 17, 17, 0.25);
+  color: transparent;
+}
+
+/* Custom Scanline Animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 12s linear infinite;
+}
+
+/* Slow Spin Animation */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 35s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinSlow 45s linear infinite reverse;
+}
+
+/* Slow Float Pulse */
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-8px) scale(1.05); opacity: 0.9; }
+}
+
+.animate-float-pulse {
+  animation: floatPulse 6s ease-in-out infinite;
+}
+
+/* Custom Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3ED;
+  border-left: 1px solid #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EFFF4F;
+}

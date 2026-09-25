@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Training artifacts (root level — not needed for deployment)
+loan_model.pkl
+Loan_default.csv
+plots/
+
+# Runtime CSV records (ephemeral on Render — not committed)
+backend/data/loan_records.csv
+backend/data/*.csv
+backend/data/*.tmp
